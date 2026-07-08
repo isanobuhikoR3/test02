@@ -1,0 +1,1 @@
+soundsフォルダにmp3を入れ、data/sounds.jsonへ追加してください。
