@@ -1,7 +1,1 @@
-
-let all=[];
-fetch('data/sounds.json').then(r=>r.json()).then(d=>{all=d;render(d);tags(d);document.getElementById('search').oninput=e=>filter(e.target.value);});
-function render(arr){let h='';arr.forEach(s=>{h+=`<div class="card"><h3>${s.title}</h3><div>${s.tags.map(t=>`<span class="tag" onclick="filterTag('${t}')">${t}</span>`).join(' ')}</div><audio controls src="${s.file}"></audio><br><a href="${s.file}" download>ダウンロード</a></div>`});document.getElementById('soundList').innerHTML=h;}
-function tags(d){const set=[...new Set(d.flatMap(x=>x.tags))];document.getElementById('tags').innerHTML=set.map(t=>`<span class="tag" onclick="filterTag('${t}')">${t}</span>`).join(' ');}
-function filter(q){q=q.toLowerCase();render(all.filter(s=>s.title.toLowerCase().includes(q)||s.tags.join(' ').toLowerCase().includes(q)));}
-function filterTag(t){render(all.filter(s=>s.tags.includes(t)));document.getElementById('search').value=t;}
+let all=[];fetch('data/sounds.json').then(r=>r.json()).then(d=>{all=d;mk();dr(d);search.oninput=e=>f(e.target.value)});function dr(a){soundList.innerHTML=a.map(s=>`<div class=card><h2>${s.title}</h2><div>${s.category}</div><div>${s.tags.map(t=>`<span class=tag onclick="tg('${t}')">${t}</span>`).join('')}</div><audio controls src="${s.file}"></audio><p><a class=btn href="${s.file}" download>ダウンロード</a></p></div>`).join('')}function mk(){tags.innerHTML=[...new Set(all.flatMap(x=>x.tags))].map(t=>`<span class=tag onclick="tg('${t}')">${t}</span>`).join(' ')}function f(q){q=q.toLowerCase();dr(all.filter(s=>s.title.toLowerCase().includes(q)||s.category.toLowerCase().includes(q)||s.tags.join(' ').toLowerCase().includes(q)))}function tg(t){search.value=t;f(t)}
