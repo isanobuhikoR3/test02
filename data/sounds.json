@@ -1,26 +1,6 @@
-<<<<<<< HEAD
 [
 {"title":"決定音01","category":"UI","file":"sounds/ui/decision01.mp3","tags":["UI","ゲーム","決定"]},
 {"title":"爆発01","category":"Battle","file":"sounds/battle/explosion01.mp3","tags":["爆発","戦闘"]},
 {"title":"雨01","file":"sounds/nature/rain01.mp3","tags":["自然","雨"]}
 ]
-=======
-{
-  "id":1,
 
-  "title":"決定音01",
-
-  "category":"UI",
-
-  "description":"ゲームの決定ボタン向け",
-
-  "file":"sounds/ui/decision01.mp3",
-
-  "tags":[
-      "UI",
-      "ゲーム",
-      "決定",
-      "メニュー"
-  ]
-}
->>>>>>> b88406337378ee53157fdff22d0434c2ea0aad29
